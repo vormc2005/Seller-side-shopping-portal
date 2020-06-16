@@ -9,6 +9,7 @@ import { ItemsItemComponent } from './items/items-list/items-item/items-item.com
 import { ReviewComponent } from './review/review.component';
 import { ReviewEditComponent } from './review/review-edit/review-edit.component';
 import { HeadingComponent } from './heading/heading.component';
+import { ItemsDetailComponent } from './items/items-list/items-detail/items-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HeadingComponent } from './heading/heading.component';
     ItemsItemComponent,
     ReviewComponent,
     ReviewEditComponent,
-    HeadingComponent
+    HeadingComponent,
+    ItemsDetailComponent
   ],
   imports: [
     BrowserModule,

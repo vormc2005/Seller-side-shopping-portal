@@ -1,2 +1,24 @@
-<p>review works!</p>
+
 <app-review-edit></app-review-edit>
+
+<div class="row">
+    <div class="col-xs-10">
+        <app-review-edit></app-review-edit>
+        <hr>
+        <ul class="list-group ">
+            <a href="#" 
+            class ="list-group-item" 
+            style="cursor: pointer"
+            *ngFor="let reviewEl of reviewItems">            
+            <img  src="{{reviewEl.imagePath}}" alt="" style="max-height: 400px;"/>
+        
+            <div class="pull-right">
+            <p class="reviewList">{{reviewEl.name}}</p>
+            <p class="reviewList">{{reviewEl.description}}</p>
+            <p class="reviewList">{{reviewEl.salesPrice}}</p>
+            <p class="reviewList">{{reviewEl.cost}}</p> 
+        </div>          
+        </a>
+        </ul>
+    </div>
+</div>
