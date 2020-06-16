@@ -1,7 +1,7 @@
-<app-heading></app-heading>
+<app-heading (featureSelected)="onNavigate($event)"></app-heading>
 <div class="container-fluid">
    
-    <app-items></app-items>
+    <app-items *ngIf="loadedFeature === 'myitems'"></app-items>
     <hr>
-    <app-review></app-review>
+    <app-review *ngIf="loadedFeature !== 'myitems'"></app-review>
 </div>

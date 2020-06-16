@@ -5,27 +5,11 @@
    </div>
 </div>
 <div class="row" >
-    <div class="col-xs-12">
-        <a 
-        href="#"
-         class="list-group-item clearfix" 
-         *ngFor="let item of items">
-            <div class="pull-left">
-                <h4 class="list-group-item-heading">{{item.name}}</h4>
-                <p class="list-group-item-text">Description: {{item.description}}</p>
-                <p class="list-group-item-text">Sales Price: ${{item.salesPrice}}</p>
-
-                <hr>
-<!-- Detail goes here -->
-                    <app-items-detail></app-items-detail> 
-
-            </div>
-            <span class="pull-right">
-                <img src="{{item.imagePath}}" alt="" class="image-responsive" style="max-height: 100px;"/>
-            </span>
-           
-        </a>
-        <app-items-item ></app-items-item>
-
+    <div class="col-xs-12">       
+        <app-items-item 
+        *ngFor="let itemEl of items"
+        [items]="itemEl"
+        (selectedItem)= "onItemWasSelected(itemEl)"
+        ></app-items-item>
     </div>
  </div>

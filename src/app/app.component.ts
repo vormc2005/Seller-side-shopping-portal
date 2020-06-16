@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'seller-side-site';
+  loadedFeature='myitems'
+
+onNavigate(feature:string){
+this.loadedFeature=feature;
+}
+
 }
