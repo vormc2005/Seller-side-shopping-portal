@@ -1,5 +1,9 @@
 
-<app-items-detail ></app-items-detail> 
-<app-items-list></app-items-list>
+<app-items-detail 
+*ngIf="selectedItem; else infoText" 
+[items]="selectedItem"></app-items-detail> 
+<ng-template #infoText>
+    <p>Please select Item</p>
+</ng-template>
+<app-items-list ></app-items-list>
 
-<p>items</p>

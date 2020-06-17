@@ -10,6 +10,8 @@ import { ReviewComponent } from './review/review.component';
 import { ReviewEditComponent } from './review/review-edit/review-edit.component';
 import { HeadingComponent } from './heading/heading.component';
 import { ItemsDetailComponent } from './items/items-list/items-detail/items-detail.component';
+import { DropownDirective } from './shared/dropdown.directive';
+import { ReviewService } from './review/review.service';
 
 @NgModule({
   declarations: [
@@ -20,13 +22,14 @@ import { ItemsDetailComponent } from './items/items-list/items-detail/items-deta
     ReviewComponent,
     ReviewEditComponent,
     HeadingComponent,
-    ItemsDetailComponent
+    ItemsDetailComponent,
+    DropownDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ReviewService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

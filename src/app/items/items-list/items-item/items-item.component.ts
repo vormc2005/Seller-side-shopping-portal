@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Item } from '../../item.model';
+import { ItemsService } from '../../items.service';
 
 
 @Component({
@@ -8,18 +9,18 @@ import { Item } from '../../item.model';
   styleUrls: ['./items-item.component.css']
 })
 export class ItemsItemComponent implements OnInit {
-@Output() selectedItem = new EventEmitter<void>()
+
 
 
 @Input() items: Item;
 
-  constructor() { }
+  constructor(private itemService: ItemsService) { }
 
   ngOnInit() {
   }
 onSelected(){
-this.selectedItem.emit();
-console.log(this.selectedItem)
+//call method in items service
+this.itemService.itemSelected.emit(this.items)
 }
 
 }
